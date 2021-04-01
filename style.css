@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ccc;
+  height: 100vh;
+}
+
+.container {
+  margin: 1rem 0;
+  background-color: #ccc;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: minmax(120px, auto) repeat(6, 70px);
+  grid-gap: 5px 5px;
+}
+
+.container > button {
+  cursor: pointer;
+  font-size: 2rem;
+  outline: none;
+  border: none;
+  background-color:rgba(41, 128, 185, 1.0);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+.container > button:hover {
+  background-color: rgba(41, 128, 185, 0.7);
+}
+
+.output {
+  grid-column: 1 / -1;
+  background: green;
+  background-color: rgba(44, 62, 80, 1.0);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.prev-operand {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, .8);
+}
+
+.current-operand {
+  font-size: 2rem;
+  color: white;
+}
+
+.big-col-btn {
+  grid-column: span 2;
+}
+.big-row-btn {
+  grid-row: span 2;
+}
